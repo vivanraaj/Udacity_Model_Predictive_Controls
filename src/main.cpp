@@ -164,10 +164,12 @@ int main() {
           {
               if(i%2 == 0)
               {
+                // even value will be x 
                 mpc_x_vals.push_back(vars[i]);
               }
               else
               {
+                // odd value will be y
                 mpc_y_vals.push_back(vars[i]);
               }
           }
@@ -181,17 +183,19 @@ int main() {
           msgJson["steering_angle"] = vars[0]/(deg2rad(25)*Lf);
           msgJson["throttle"] = vars[1];
 
-          //.. add (x,y) points to list here, points are in reference to the vehicle's coordinate system
-          // the points in the simulator are connected by a Green line
-
-          msgJson["mpc_x"] = mpc_x_vals;
-          msgJson["mpc_y"] = mpc_y_vals;
 
           //.. add (x,y) points to list here, points are in reference to the vehicle's coordinate system
           // the points in the simulator are connected by a Yellow line
 
           msgJson["next_x"] = next_x_vals;
           msgJson["next_y"] = next_y_vals;
+          
+          //.. add (x,y) points to list here, points are in reference to the vehicle's coordinate system
+          // the points in the simulator are connected by a Green line
+
+          msgJson["mpc_x"] = mpc_x_vals;
+          msgJson["mpc_y"] = mpc_y_vals;
+
 
 
           auto msg = "42[\"steer\"," + msgJson.dump() + "]";
