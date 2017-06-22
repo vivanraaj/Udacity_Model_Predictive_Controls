@@ -20,6 +20,17 @@
         "future": "cpp",
         "chrono": "cpp",
         "iostream": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "ostream": "cpp",
+        "array": "cpp",
+        "system_error": "cpp",
+        "vector": "cpp",
+        "hash_map": "cpp",
+        "*.tcc": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "type_traits": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp"
     }
 }
